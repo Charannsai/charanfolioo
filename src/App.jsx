@@ -37,7 +37,7 @@ function App() {
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       </div>
 
-      <div className="max-w-xl mx-auto px-6 py-16">
+      <div className="max-w-2xl mx-auto px-6 py-16">
         <Profile />
         <TechStack />
         <Projects />
