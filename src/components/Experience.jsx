@@ -69,12 +69,12 @@ export default function Experience() {
               <div className="absolute left-2 top-2 w-1 h-3 bg-gray-500 rounded-full -translate-x-1/2">
                </div>
               
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+              <div className="flex flex-row items-center justify-between mb-2">
                 <div>
-                  <h3 className="text-md mb-1 font-semibold">{experience.company}</h3>
+                  <h3 className="text-md font-semibold">{experience.company}</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">{experience.role}</p>
                 </div>
-                <p className="text-xs text-gray-500 mb-5 dark:text-gray-400 md:ml-4">
+                <p className="text-xs text-gray-500 mb-5 dark:text-gray-400 ml-4">
                   {experience.startDate} - {experience.endDate}
                 </p>
               </div>

@@ -44,13 +44,13 @@ export default function Connect() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
+            
           >
             <social.icon className="w-4 h-4" />
             <span className="sr-only">{social.name}</span>
           </motion.a>
         ))}
+        {/* <button className='text-xs  font-display text-white bg-gray-600 p-1 rounded-full'>My Resume</button> */}
       </div>
     </motion.div>
   )

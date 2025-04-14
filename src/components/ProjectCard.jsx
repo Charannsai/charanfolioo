@@ -35,16 +35,16 @@ export default function ProjectCard({ project, index }) {
             className="absolute inset-0 bg-white dark:bg-gray-900/50 p-4 flex items-center justify-center"
           >
             <Tooltip.Provider>
-              <div className="flex gap-4">
+              <div className="flex  gap-4">
                 <Tooltip.Root>
                   <Tooltip.Trigger asChild>
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
                     >
-                      <FiExternalLink className="w-6 h-6" />
+                      <FiExternalLink className="w-4 h-4" />
                     </a>
                   </Tooltip.Trigger>
                   <Tooltip.Portal>
@@ -64,9 +64,9 @@ export default function ProjectCard({ project, index }) {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
                     >
-                      <FiGithub className="w-6 h-6" />
+                      <FiGithub className="w-4 h-4" />
                     </a>
                   </Tooltip.Trigger>
                   <Tooltip.Portal>
@@ -84,9 +84,9 @@ export default function ProjectCard({ project, index }) {
                   <Tooltip.Trigger asChild>
                     <a
                       href={project.knowMoreUrl}
-                      className="p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
                     >
-                      <FiInfo className="w-6 h-6" />
+                      <FiInfo className="w-4 h-4" />
                     </a>
                   </Tooltip.Trigger>
                   <Tooltip.Portal>
