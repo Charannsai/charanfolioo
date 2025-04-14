@@ -11,7 +11,7 @@ export default function ProjectCard({ project, index }) {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1 * index }}
-      className="bg-white dark:bg-gray-900/50 rounded-lg shadow-lg overflow-hidden p-3 relative group"
+      className="bg-white dark:bg-gray-400/10 rounded-lg shadow-lg overflow-hidden p-3 relative group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -32,7 +32,7 @@ export default function ProjectCard({ project, index }) {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="absolute inset-0 bg-white dark:bg-gray-900/50 p-4 flex items-center justify-center"
+            className="absolute inset-0 bg-white dark:bg-gray-400/10 p-4 flex items-center justify-center"
           >
             <Tooltip.Provider>
               <div className="flex  gap-4">
@@ -42,7 +42,7 @@ export default function ProjectCard({ project, index }) {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-500/20 rounded-full transition-colors"
                     >
                       <FiExternalLink className="w-4 h-4" />
                     </a>
@@ -64,7 +64,7 @@ export default function ProjectCard({ project, index }) {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-500/20 rounded-full transition-colors"
                     >
                       <FiGithub className="w-4 h-4" />
                     </a>
@@ -84,7 +84,7 @@ export default function ProjectCard({ project, index }) {
                   <Tooltip.Trigger asChild>
                     <a
                       href={project.knowMoreUrl}
-                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                      className="p-4 hover:bg-gray-100 dark:hover:bg-gray-500/20 rounded-full transition-colors"
                     >
                       <FiInfo className="w-4 h-4" />
                     </a>
