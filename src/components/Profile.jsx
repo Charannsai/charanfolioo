@@ -16,7 +16,7 @@ export default function Profile() {
           className="w-20 h-20 rounded-lg shadow-lg"
         />
         <div className="text-left">
-          <h4 className="font-display text-2xl  font-bold mb-1">Charan Sai Pathuri</h4>
+          <h4 className="font-display md:text-2xl text-xl font-bold mb-1">Charan Sai Pathuri</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-2 ">Hyderabad, India</p>
           <Connect />
         </div>
