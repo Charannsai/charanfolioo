@@ -33,7 +33,7 @@ function App() {
       transition={{ duration: 0.5 }}
       className={`min-h-screen ${isLoading ? 'blur-load' : 'loaded'}`}
     >
-      <div className="absolute top-16 right-8">
+      <div className="absolute top-4 right-4">
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       </div>
 
