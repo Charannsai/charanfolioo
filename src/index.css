@@ -34,7 +34,7 @@ body::-webkit-scrollbar{
 
 .blur-load.loaded {
   filter: blur(0);
-  transition: filter 0.5s ease;
+  transition: filter 1.5s ease;
 }
 
 .tech-stack-icon {

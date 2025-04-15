@@ -17,7 +17,7 @@ export default function Profile() {
         />
         <div className="text-left">
           <h4 className="font-display text-2xl  font-bold mb-1">Charan Sai Pathuri</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2 ">Full Stack Developer</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2 ">Hyderabad, India</p>
           <Connect />
         </div>
       </motion.div>
@@ -31,7 +31,8 @@ export default function Profile() {
         <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm dark:text-gray-400">
           <li>I am an Engineering student passionate about AI and Software Development.</li>
           <li>Committed to continuous learning to stay ahead in emerging technologies.</li>
-          <li>Currently Building my side projects and learning for CCNA Certification.</li>
+          <li>My Interests lies on various tech and I am involved in learning Networking as well.</li>
+          <li>Currently Building my side projects and preparing for CCNA Certification.</li>
           <li>I Aspire to contribute to cutting-edge projects that solve real-world problems through technology.</li>
           
         </ul>
@@ -46,7 +47,7 @@ export default function Profile() {
         <p className="text-gray-600 text-sm dark:text-gray-400">
           Read my latest blogs at{' '}
           <a
-            href="#"
+            href="https://blogs.charanfolio.me"
             className="text-gray-600 dark:text-gray-400 font-semibold"
           >
             blogs.charanfolio.me
