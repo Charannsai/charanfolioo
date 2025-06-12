@@ -9,7 +9,7 @@ const projects = [
     image: "https://raw.githubusercontent.com/Charannsai/images-haha/refs/heads/main/Screenshot%202025-04-06%20101823.png",
     liveUrl: "https://rapiduix.tech",
     githubUrl: "https://github.com/charannsai/rapiduix",
-    knowMoreUrl: "/projects/rapiduix"
+    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   },
   {
     name: "EventOrgX",
@@ -17,15 +17,15 @@ const projects = [
     image: "https://placehold.co/600x400",
     liveUrl: "https://charanfolio.site",
     githubUrl: "https://github.com/charannsai/",
-    knowMoreUrl: "/projects/project2"
+    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   },
   {
-    name: "Repalize",
-    description: "Built an AI tool to generate knowledge on a specific repo.",
+    name: "BlogDrop",
+    description: "A blogging platform for sharing ideas and knowledge.",
     image: "https://placehold.co/600x400",
-    liveUrl: "https://project3.demo",
-    githubUrl: "https://github.com/username/project3",
-    knowMoreUrl: "/projects/project3"
+    liveUrl: "https://blog-drop.vercel.app",
+    githubUrl: "https://blog-drop.vercel.app",
+    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   },
   {
     name: "CollaBro",
@@ -33,7 +33,7 @@ const projects = [
     image: "https://placehold.co/600x400",
     liveUrl: "https://collabflow.charanfolio.me/",
     githubUrl: "https://collabflow.charanfolio.me/",
-    knowMoreUrl: "/projects/project4"
+    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   }
 ]
 

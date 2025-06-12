@@ -44,7 +44,7 @@ export default function Profile() {
         className="space-y-3 mb-2 text-left"
       >
         <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm dark:text-gray-400">
-          <li>I am an Engineering student passionate about AI and Software Development.</li>
+          <li>I’m a Full stack developer by Profession and Engineering student by academics</li>
           <li>Committed to continuous learning and staying ahead in emerging technologies.</li>
           <li>Interested in various tech domains, including Networking.</li>
           <li>Currently working on side projects and preparing for CCNA Certification</li>
