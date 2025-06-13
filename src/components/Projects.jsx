@@ -17,14 +17,14 @@ const projects = [
     image: "https://placehold.co/600x400",
     liveUrl: "https://charanfolio.site",
     githubUrl: "https://github.com/charannsai/",
-    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
+    knowMoreUrl: "https://blogdrop.charanfolio.me/blog/066deb00-d41e-46cd-b7b8-ee47048eb784"
   },
   {
     name: "BlogDrop",
     description: "A blogging platform for sharing ideas and knowledge.",
     image: "https://placehold.co/600x400",
-    liveUrl: "https://blog-drop.vercel.app",
-    githubUrl: "https://blog-drop.vercel.app",
+    liveUrl: "https://blogdrop.charanfolio.me",
+    githubUrl: "https://blogdrop.charanfolio.me",
     knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   },
   {
