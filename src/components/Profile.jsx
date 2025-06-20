@@ -25,10 +25,11 @@ export default function Profile() {
         transition={{ delay: 0.2 }}
         className="flex flex-row items-start gap-4 mb-6 "
       >
-        <img
-          src="https://media.licdn.com/dms/image/v2/D5603AQFmQoCDtBbnfQ/profile-displayphoto-shrink_200_200/B56Zd0w0mvHQAY-/0/1750010645768?e=1755734400&v=beta&t=PPsIvx_OGttNi7u1sxlwgWuUlGZTOFqD6vbU5vPa9C4"
-          className="w-20 h-20 rounded-lg shadow-lg"
-        />
+       <img
+  src="https://media.licdn.com/dms/image/v2/D5603AQFmQoCDtBbnfQ/profile-displayphoto-shrink_200_200/B56Zd0w0mvHQAY-/0/1750010645768?e=1755734400&v=beta&t=PPsIvx_OGttNi7u1sxlwgWuUlGZTOFqD6vbU5vPa9C4"
+  className="w-20 h-20 rounded-lg shadow-lg filter transition duration-300 ease-in-out grayscale hover:grayscale-0 dark:grayscale-0 hover:shadow-xl"
+/>
+
         <div className="text-left">
           <h4 className="font-display md:text-2xl text-xl font-bold mb-1">Charan Sai Pathuri</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-2 ">Hyderabad, India</p>
@@ -43,10 +44,10 @@ export default function Profile() {
         className="space-y-3 mb-2 text-left"
       >
         <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm dark:text-gray-400">
-          <li>I’m a Full stack developer by Profession and Engineering student by academics</li>
+          <li>I’m a Full stack developer by Profession and Engineering student by academics.</li>
           <li>Committed to continuous learning and staying ahead in emerging technologies.</li>
           <li>Interested in various tech domains, including Networking.</li>
-          <li>Currently working on side projects and preparing for CCNA Certification</li>
+          <li>Currently working on side projects and preparing for CCNA Certification.</li>
           <li>I Aspiring to contribute to impactful, real-world solutions through innovative technology.</li>
         </ul>
       </motion.div>
@@ -74,10 +75,10 @@ export default function Profile() {
               My Resume.
             </span>
             
-            {/* Hover Card Container with expanded hover area */}
+            
             {isHovered && (
               <div className="absolute left-0 top-0 w-full h-full pointer-events-none z-40">
-                {/* Invisible hover bridge */}
+                
                 <div 
                   className="absolute left-full top-0 w-6 h-full pointer-events-auto"
                   onMouseEnter={() => setIsHovered(true)}
@@ -86,7 +87,7 @@ export default function Profile() {
               </div>
             )}
             
-            {/* Hover Card */}
+            
             <motion.div
               initial={{ opacity: 0, x: -10, scale: 0.95 }}
               animate={{ 
@@ -102,7 +103,8 @@ export default function Profile() {
               onMouseLeave={() => setIsHovered(false)}
             >
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden min-w-[180px]">
-                {/* Left Arrow pointing to the text */}
+    
+    
                 <div className="absolute left-0 top-3 transform -translate-x-2 w-4 h-4 bg-white dark:bg-[#242424] border border-gray-200 dark:border-gray-700 rotate-45 border-r-0 border-b-0"></div>
                 
                 <div className="relative bg-white dark:bg-[#242424] rounded-lg py-1">
@@ -136,7 +138,7 @@ export default function Profile() {
         </p>
       </motion.div>
 
-      {/* PDF Modal */}
+
       <PDFModal
         isOpen={isPDFModalOpen}
         onClose={() => setIsPDFModalOpen(false)}
