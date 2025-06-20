@@ -26,8 +26,7 @@ export default function Profile() {
         className="flex flex-row items-start gap-4 mb-6 "
       >
         <img
-          src="https://media.licdn.com/dms/image/v2/D5603AQF1OgRm9MVMqg/profile-displayphoto-shrink_200_200/B56ZV1CQfQGsAY-/0/1741425281600?e=1750291200&v=beta&t=-oe1xoPDji9ikp3WC6EfkRp73DR9WQZAeuvLHLOAJsI"
-          alt="Profile"
+          src="https://media.licdn.com/dms/image/v2/D5603AQFmQoCDtBbnfQ/profile-displayphoto-shrink_200_200/B56Zd0w0mvHQAY-/0/1750010645768?e=1755734400&v=beta&t=PPsIvx_OGttNi7u1sxlwgWuUlGZTOFqD6vbU5vPa9C4"
           className="w-20 h-20 rounded-lg shadow-lg"
         />
         <div className="text-left">
