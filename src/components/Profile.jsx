@@ -8,11 +8,11 @@ export default function Profile() {
   const [isPDFModalOpen, setIsPDFModalOpen] = useState(false)
 
   const handleResumeClick = (openInNewTab) => {
-    const resumeUrl = '/Charan_s_Resume.pdf' // Replace with your actual resume URL
+    const resumeUrl = '/Charan_s_Resume.pdf' 
     if (openInNewTab) {
       window.open(resumeUrl, '_blank')
     } else {
-      // Open in modal instead of navigating
+      
       setIsPDFModalOpen(true)
     }
   }
@@ -26,7 +26,7 @@ export default function Profile() {
         className="flex flex-row items-start gap-4 mb-6 "
       >
        <img
-  src="https://media.licdn.com/dms/image/v2/D5603AQFmQoCDtBbnfQ/profile-displayphoto-shrink_200_200/B56Zd0w0mvHQAY-/0/1750010645768?e=1755734400&v=beta&t=PPsIvx_OGttNi7u1sxlwgWuUlGZTOFqD6vbU5vPa9C4"
+  src="https://media.licdn.com/dms/image/v2/D5603AQHl6MYT9E5LrA/profile-displayphoto-scale_400_400/B56ZfFK9C8HEAk-/0/1751359678531?e=1756944000&v=beta&t=zzQr7J5JHsBRjsvQsgv42hHgUgzt4Ne5TTFih0WDsiU"
   className="w-20 h-20 rounded-lg shadow-lg filter transition duration-300 ease-in-out grayscale hover:grayscale-0 dark:grayscale-0 hover:shadow-xl"
 />
 
