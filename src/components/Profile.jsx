@@ -8,11 +8,10 @@ export default function Profile() {
   const [isPDFModalOpen, setIsPDFModalOpen] = useState(false)
 
   const handleResumeClick = (openInNewTab) => {
-    const resumeUrl = '/Charan_s_Resume.pdf' // Replace with your actual resume URL
+    const resumeUrl = '/Charan_s_Resume.pdf' 
     if (openInNewTab) {
       window.open(resumeUrl, '_blank')
     } else {
-      // Open in modal instead of navigating
       setIsPDFModalOpen(true)
     }
   }
@@ -26,7 +25,7 @@ export default function Profile() {
         className="flex flex-row items-start gap-4 mb-6 "
       >
        <img
-  src="https://media.licdn.com/dms/image/v2/D5603AQFmQoCDtBbnfQ/profile-displayphoto-shrink_200_200/B56Zd0w0mvHQAY-/0/1750010645768?e=1755734400&v=beta&t=PPsIvx_OGttNi7u1sxlwgWuUlGZTOFqD6vbU5vPa9C4"
+  src="https://media.licdn.com/dms/image/v2/D5603AQEScYL7y6IiDA/profile-displayphoto-scale_200_200/B56Zg2RqxhHUAc-/0/1753257258613?e=1756339200&v=beta&t=QyJ-kplN0UIm4u-uIU5a9PvJY20j6FxPqgqMvs4r8zI"
   className="w-20 h-20 rounded-lg shadow-lg filter transition duration-300 ease-in-out grayscale hover:grayscale-0 dark:grayscale-0 hover:shadow-xl"
 />
 
@@ -44,11 +43,11 @@ export default function Profile() {
         className="space-y-3 mb-2 text-left"
       >
         <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm dark:text-gray-400">
-          <li>I’m a Full stack developer by Profession and Engineering student by academics.</li>
+          <li>I’m an engineering student passionate about learning and building Tech.</li>
           <li>Committed to continuous learning and staying ahead in emerging technologies.</li>
           <li>Interested in various tech domains, including Networking.</li>
-          <li>Currently working on side projects and preparing for CCNA Certification.</li>
-          <li>I Aspiring to contribute to impactful, real-world solutions through innovative technology.</li>
+          <li>Currently working on my side projects and dealing with my academics.</li>
+          {/* <li>I Aspiring to contribute to impactful, real-world solutions through innovative technology.</li> */}
         </ul>
       </motion.div>
 

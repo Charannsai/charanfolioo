@@ -74,10 +74,8 @@ export default function PDFModal({ isOpen, onClose, pdfUrl }) {
         className="fixed inset-0 z-50 flex items-center justify-center"
         onClick={onClose}
       >
-        {/* Backdrop */}
         <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
         
-        {/* Modal Container */}
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -90,7 +88,6 @@ export default function PDFModal({ isOpen, onClose, pdfUrl }) {
           } shadow-2xl overflow-hidden`}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Header with controls */}
           <div className={`flex items-center justify-between ${
             isMobile ? 'p-3' : 'p-4'
           } border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#1d1d1d]`}>
@@ -100,9 +97,7 @@ export default function PDFModal({ isOpen, onClose, pdfUrl }) {
               Resume Preview
             </h3>
             
-            {/* Controls */}
             <div className="flex items-center gap-1">
-              {/* Mobile/Error action buttons */}
               {(isMobile || pdfError) && (
                 <>
                   <button
@@ -129,7 +124,6 @@ export default function PDFModal({ isOpen, onClose, pdfUrl }) {
                 </>
               )}
               
-              {/* Close Button (X) */}
               <button
                 onClick={onClose}
                 className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
@@ -142,12 +136,10 @@ export default function PDFModal({ isOpen, onClose, pdfUrl }) {
             </div>
           </div>
           
-          {/* Content Area */}
           <div 
             className="flex-1 overflow-hidden relative bg-gray-100 dark:bg-[#242424]"
             style={{ height: `calc(100% - ${isMobile ? '57px' : '73px'})` }}
           >
-            {/* Mobile fallback or PDF error */}
             {(isMobile || pdfError) ? (
               <div className="flex flex-col items-center justify-center h-full p-6 text-center">
                 <div className="max-w-md">

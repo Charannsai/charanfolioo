@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import ThemeToggle from './components/ThemeToggle'
 import Profile from './components/Profile'
-import TechStack from './components/TechStack'
+// import TechStack from './components/TechStack'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 
@@ -39,7 +39,7 @@ function App() {
 
       <div className="max-w-2xl mx-auto px-6 py-16">
         <Profile />
-        <TechStack />
+        {/* <TechStack /> */}
         <Projects />
         <Experience />
       </div>

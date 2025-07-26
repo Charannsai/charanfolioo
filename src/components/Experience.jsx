@@ -6,7 +6,7 @@ const experiences = [
     company: "Edunet Foundation",
     role: "Full Stack Intern",
     startDate: "Feb 2025",
-    endDate: "Present",
+    endDate: "April 2025",
     description: "In my role as a Full Stack Developer at Edunet Foundation(AICTE), I am currently working on building a real-time collaboration tool for project management. Leveraging my skills in development, I aim to create a seamless and efficient platform to enhance team productivity and communication."
   },
   {

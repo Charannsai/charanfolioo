@@ -3,14 +3,14 @@ import { motion } from 'framer-motion'
 import ProjectCard from './ProjectCard'
 
 const projects = [
-  {
-    name: "Rapiduix V 1.0.8",
-    description: "UI Component Library for cross-native applications.",
-    image: "https://raw.githubusercontent.com/Charannsai/images-haha/refs/heads/main/Screenshot%202025-04-06%20101823.png",
-    liveUrl: "https://rapiduix.tech",
-    githubUrl: "https://github.com/charannsai/rapiduix",
-    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
-  },
+  // {
+  //   name: "Rapiduix V 1.0.8",
+  //   description: "UI Component Library for cross-native applications.",
+  //   image: "https://raw.githubusercontent.com/Charannsai/images-haha/refs/heads/main/Screenshot%202025-04-06%20101823.png",
+  //   liveUrl: "https://rapiduix.tech",
+  //   githubUrl: "https://github.com/charannsai/rapiduix-components",
+  //   knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
+  // },
   {
     name: "EventOrgX",
     description: "A to Z Event Management System for Organizations.",
@@ -27,14 +27,22 @@ const projects = [
     githubUrl: "https://blogdrop.charanfolio.me",
     knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   },
-  {
-    name: "CollaBro",
-    description: "Real time collaboration tool for project management with AI supported features.",
-    image: "https://placehold.co/600x400",
-    liveUrl: "https://collabflow.charanfolio.me/",
-    githubUrl: "https://collabflow.charanfolio.me/",
-    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
-  }
+  // {
+  //   name: "BlogDrop",
+  //   description: "A blogging platform for sharing ideas and knowledge.",
+  //   image: "https://placehold.co/600x400",
+  //   liveUrl: "https://blogdrop.charanfolio.me",
+  //   githubUrl: "https://blogdrop.charanfolio.me",
+  //   knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
+  // },
+  // {
+  //   name: "CollaBro",
+  //   description: "Real time collaboration tool for project management with AI supported features.",
+  //   image: "https://placehold.co/600x400",
+  //   liveUrl: "https://collabflow.charanfolio.me/",
+  //   githubUrl: "https://collabflow.charanfolio.me/",
+  //   knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
+  // }
 ]
 
 export default function Projects() {
