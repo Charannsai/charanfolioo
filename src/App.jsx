@@ -42,6 +42,11 @@ function App() {
         {/* <TechStack /> */}
         <Projects />
         <Experience />
+        <div className=' flex items-center justify-center mt-8 text-gray-500 dark:text-gray-400 text-xs'>
+          <p>
+            Last updated on: <span className="text-gray-500 dark:text-gray-400">April 2025</span>
+          </p>
+        </div>
       </div>
     </motion.div>
   )
