@@ -3,21 +3,21 @@ import { motion } from 'framer-motion'
 import ProjectCard from './ProjectCard'
 
 const projects = [
-  // {
-  //   name: "Rapiduix V 1.0.8",
-  //   description: "UI Component Library for cross-native applications.",
-  //   image: "https://raw.githubusercontent.com/Charannsai/images-haha/refs/heads/main/Screenshot%202025-04-06%20101823.png",
-  //   liveUrl: "https://rapiduix.tech",
-  //   githubUrl: "https://github.com/charannsai/rapiduix-components",
-  //   knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
-  // },
+  {
+    name: "SR3 Services",
+    description: "Company website for SR3 Services, still under development.",
+    image: "https://raw.githubusercontent.com/Charannsai/images-haha/refs/heads/main/Screenshot%202025-04-06%20101823.png",
+    liveUrl: "https://sr3.vercel.app/",
+    githubUrl: "https://github.com/charannsai/rapiduix-components",
+    knowMoreUrl: "https://sr3.vercel.app/about"
+  },
   {
     name: "EventOrgX",
-    description: "A to Z Event Management System for Organizations.",
+    description: "Your all in-one event management solution.",
     image: "https://placehold.co/600x400",
     liveUrl: "https://charanfolio.site",
     githubUrl: "https://github.com/charannsai/",
-    knowMoreUrl: "https://blogdrop.charanfolio.me/blog/066deb00-d41e-46cd-b7b8-ee47048eb784"
+    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   },
   {
     name: "BlogDrop",
@@ -35,14 +35,14 @@ const projects = [
   //   githubUrl: "https://blogdrop.charanfolio.me",
   //   knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   // },
-  // {
-  //   name: "CollaBro",
-  //   description: "Real time collaboration tool for project management with AI supported features.",
-  //   image: "https://placehold.co/600x400",
-  //   liveUrl: "https://collabflow.charanfolio.me/",
-  //   githubUrl: "https://collabflow.charanfolio.me/",
-  //   knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
-  // }
+  {
+    name: "CollabFlow (Under Development)",
+    description: "Real time collaboration tool for project management with AI supported features.",
+    image: "https://placehold.co/600x400",
+    liveUrl: "https://collabflow.charanfolio.me/",
+    githubUrl: "https://collabflow.charanfolio.me/",
+    knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
+  }
 ]
 
 export default function Projects() {

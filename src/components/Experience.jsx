@@ -3,6 +3,13 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
+    company: "SR3 Services",
+    role: "Web Developer",
+    startDate: "April 2025",
+    endDate: "Present",
+    description: "As a Web Developer at SR3, I am responsible for building and launching the official SR3 website. I handled both the front-end and back-end development, ensuring a responsive, user-friendly interface while integrating the required functionalities to meet the organization’s goals. My work focused on creating a clean, fast, and modern web experience that effectively communicates SR3’s mission and services. Still working on it, it is under beta testing phase."
+  },
+  {
     company: "Edunet Foundation",
     role: "Full Stack Intern",
     startDate: "Feb 2025",

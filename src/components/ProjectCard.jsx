@@ -60,14 +60,14 @@ export default function ProjectCard({ project, index }) {
 
                 <Tooltip.Root>
                   <Tooltip.Trigger asChild>
-                    <a
+                    {/* <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-4 hover:bg-gray-100 dark:hover:bg-gray-500/20 rounded-full transition-colors"
                     >
                       <FiGithub className="w-4 h-4" />
-                    </a>
+                    </a> */}
                   </Tooltip.Trigger>
                   <Tooltip.Portal>
                     <Tooltip.Content
