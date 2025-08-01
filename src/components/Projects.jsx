@@ -12,10 +12,10 @@ const projects = [
     knowMoreUrl: "https://sr3.vercel.app/about"
   },
   {
-    name: "EventOrgX",
+    name: "Ezent",
     description: "Your all in-one event management solution.",
     image: "https://placehold.co/600x400",
-    liveUrl: "https://charanfolio.site",
+    liveUrl: "https://ezent.me",
     githubUrl: "https://github.com/charannsai/",
     knowMoreUrl: "https://www.linkedin.com/in/charannsai/details/projects/"
   },
