@@ -1,13 +1,39 @@
-import { FiSun, FiMoon } from 'react-icons/fi'
+import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
 
-export default function ThemeToggle({ theme, toggleTheme }) {
+export default function ThemeToggle({ theme, setTheme }) {
+  const cycleTheme = () => {
+    if (theme === 'system') {
+      setTheme('light')
+    } else if (theme === 'light') {
+      setTheme('dark')
+    } else {
+      setTheme('system')
+    }
+  }
+
+  const getIcon = () => {
+    switch (theme) {
+      case 'light': return <FiSun size={14} />
+      case 'dark': return <FiMoon size={14} />
+      default: return <FiMonitor size={14} />
+    }
+  }
+
+  const getLabel = () => {
+    switch (theme) {
+      case 'light': return 'Light'
+      case 'dark': return 'Dark'
+      default: return 'System'
+    }
+  }
+
   return (
     <button
-      onClick={toggleTheme}
-      className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-400/10 transition-colors"
-      aria-label="Toggle theme"
+      onClick={cycleTheme}
+      className="flex items-center gap-2 px-3 py-2 text-xs text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors cursor-pointer"
     >
-      {theme === 'light' ? <FiMoon size={18} /> : <FiSun size={18} />}
+      {getIcon()}
+      <span>{getLabel()}</span>
     </button>
   )
 }

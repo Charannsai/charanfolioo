@@ -10,6 +10,11 @@ export default {
         sans: ['Inter', 'sans-serif'],
         display: ['Inter', 'sans-serif'],
       },
+      colors: {
+        gray: {
+          900: '#121212',
+        },
+      },
     },
   },
   plugins: [],

@@ -57,7 +57,7 @@ export default function Profile() {
         transition={{ delay: 0.4 }}
         className="text-left"
       >
-        <p className="text-gray-600 text-sm dark:text-gray-400">
+        <div className="text-gray-600 text-sm dark:text-gray-400">
           Read my latest blogs at{' '}
           <a
             href="https://blogs.charanfolio.me"
@@ -101,18 +101,18 @@ export default function Profile() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden min-w-[180px]">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden min-w-[140px]">
     
     
-                <div className="absolute left-0 top-3 transform -translate-x-2 w-4 h-4 bg-white dark:bg-[#242424] border border-gray-200 dark:border-gray-700 rotate-45 border-r-0 border-b-0"></div>
+                <div className="absolute left-0 top-2 transform -translate-x-2 w-3 h-3 bg-white dark:bg-[#242424] border border-gray-200 dark:border-gray-700 rotate-45 border-r-0 border-b-0"></div>
                 
                 <div className="relative bg-white dark:bg-[#242424] rounded-lg py-1">
                   <button
                     onClick={() => handleResumeClick(true)}
                     onMouseDown={(e) => e.preventDefault()}
-                    className="w-full px-4 py-3 text-left text-sm text-gray-700 dark:text-gray-300 gap-3 hover:bg-gray-50 dark:hover:bg-[#1d1d1d] transition-colors duration-150 flex items-center border-none outline-none cursor-pointer"
+                    className="w-full px-3 py-2 text-left text-xs text-gray-700 dark:text-gray-300 gap-2 hover:bg-gray-50 dark:hover:bg-[#1d1d1d] transition-colors duration-150 flex items-center border-none outline-none cursor-pointer"
                   >
-                    <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     <span>Open in new tab</span>
@@ -123,9 +123,9 @@ export default function Profile() {
                   <button
                     onClick={() => handleResumeClick(false)}
                     onMouseDown={(e) => e.preventDefault()}
-                    className="w-full px-4 py-3 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#1d1d1d] transition-colors duration-150 flex items-center gap-3 border-none outline-none cursor-pointer"
+                    className="w-full px-3 py-2 text-left text-xs text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#1d1d1d] transition-colors duration-150 flex items-center gap-2 border-none outline-none cursor-pointer"
                   >
-                    <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     <span>Open here</span>
@@ -134,7 +134,7 @@ export default function Profile() {
               </div>
             </motion.div>
           </span>
-        </p>
+        </div>
       </motion.div>
 
 
