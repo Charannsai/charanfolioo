@@ -11,7 +11,7 @@ export default function ProjectCard({ project, index }) {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1 * index }}
-      className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900/40 dark:to-gray-900/40 rounded-xl  dark:border-gray-600 border hover:shadow-xl hover:scale-[1.01] dark:hover:border-gray-500 overflow-hidden relative group transition-all duration-300 h-[120px]"
+      className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900/40 dark:to-gray-900/40 rounded-xl  dark:border-gray-800 border hover:shadow-xl hover:scale-[1.01] dark:hover:border-gray-800 overflow-hidden relative group transition-all duration-300 h-[120px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
