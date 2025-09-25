@@ -3,18 +3,18 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    company: "SR3 Services",
-    role: "Web Developer",
-    startDate: "April 2025",
+    company: "SR3 Excellence",
+    role: "Full Stack Developer",
+    startDate: "Nov 2024",
     endDate: "Present",
-    description: "As a Web Developer at SR3, I am responsible for building and launching the official SR3 website. I handled both the front-end and back-end development, ensuring a responsive, user-friendly interface while integrating the required functionalities to meet the organization’s goals. My work focused on creating a clean, fast, and modern web experience that effectively communicates SR3’s mission and services. Still working on it, it is under beta testing phase."
+    description: "As a Full Stack Web Developer at SR3, I am responsible for building and launching the official SR3 website. I handled both the front-end and back-end development, ensuring a responsive, user-friendly interface while integrating the required functionalities to meet the organization’s goals. My work focused on creating a clean, fast, and modern web experience that effectively communicates SR3’s mission and services. Still working on it, it is under beta testing phase."
   },
   {
     company: "Edunet Foundation",
     role: "Full Stack Intern",
     startDate: "Feb 2025",
     endDate: "April 2025",
-    description: "In my role as a Full Stack Developer at Edunet Foundation(AICTE), I am currently working on building a real-time collaboration tool for project management. Leveraging my skills in development, I aim to create a seamless and efficient platform to enhance team productivity and communication."
+    description: "In my role as a Full Stack Developer at Edunet Foundation(AICTE), I worked on building a real-time collaboration tool for project management. Leveraging my skills in development, I aim to create a seamless and efficient platform to enhance team productivity and communication."
   },
   {
     company: "ICN, Pallavi Engineering College",
@@ -30,13 +30,7 @@ const experiences = [
     endDate: "Present",
     description: "Built and maintained web applications using modern JavaScript frameworks. Collaborated with various clients to understand their requirements and deliver tailored solutions. Developed RESTful APIs and integrated third-party services to enhance application functionality. Ensured code quality through testing and code reviews, while also optimizing applications for performance and scalability."
   },
-  {
-    company: "AICTE",
-    role: "AIML Intern",
-    startDate: "Jan 2025",
-    endDate: "Feb 2025",
-    description: "Enhanced energy planning and management processes to optimize solar power generation.Implemented innovative solutions for improving solar energy efficiency."
-  }
+  
 ]
 
 export default function Experience() {
@@ -55,7 +49,7 @@ export default function Experience() {
         {experiences.length > 1 && (
           <button
             onClick={() => setShowAll(!showAll)}
-            className="text-xs text-gray-500 hover:text-gray-600 mt-2 dark:text-gray-400 dark:hover:text-gray-300 transition-colors"
+            className="text-xs text-gray-500 hover:text-gray-600 mt-2 dark:text-gray-400 dark:hover:text-gray-300 transition-colors hover:underline hover:underline-offset-4"
           >
             {showAll ? 'Show Less' : 'Show More'}
           </button>
@@ -86,7 +80,7 @@ export default function Experience() {
                 </p>
               </div>
               
-              <p className="text-gray-600 dark:text-gray-400 text-xs">
+              <p className="text-gray-600 dark:text-gray-400 text-xs text-justify">
                 {experience.description}
               </p>
             </motion.div>

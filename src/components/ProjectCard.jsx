@@ -23,14 +23,14 @@ export default function ProjectCard({ project, index }) {
             className="p-5 space-y-3"
           >
             <div className="flex items-start justify-between">
-              <h3 className="font-display text-sm font-semibold text-left pr-4">{project.name}</h3>
+              <h3 className="font-display text-sm font-semibold text-left pr-4 ">{project.name}</h3>
               <div className="flex gap-1">
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                 <div className="w-2 h-2 bg-red-400 rounded-full"></div>
               </div>
             </div>
-            <p className="text-gray-600 dark:text-gray-400 text-left text-xs leading-relaxed">{project.description}</p>
+            <p className="text-gray-600 dark:text-gray-400 text-justify text-xs leading-relaxed">{project.description}</p>
           </motion.div>
         )}
         
