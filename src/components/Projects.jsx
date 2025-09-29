@@ -107,7 +107,7 @@ export default function Projects() {
                       scale: previewProject ? 1 : 0.9
                     }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute z-50 top-0 right-full mr-4 w-96 h-64 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl overflow-hidden pointer-events-auto"
+                    className="absolute z-50 top-0 left-full ml-4 w-80 h-56 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl overflow-hidden pointer-events-auto md:w-96 md:h-64"
                     style={{
                       transformStyle: 'preserve-3d',
                       transform: isAnimating ? 'perspective(1000px) rotateY(-90deg) scale(1.2)' : 'none',

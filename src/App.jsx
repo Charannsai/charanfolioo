@@ -40,9 +40,9 @@ function App() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`min-h-screen ${isLoading ? 'blur-load' : 'loaded'}`}
+      className={`min-h-screen overflow-x-hidden ${isLoading ? 'blur-load' : 'loaded'}`}
     >
-      <div className="max-w-2xl mx-auto px-6 md:py-28 py-12">
+      <div className="max-w-2xl mx-auto px-6 md:py-28 py-12 overflow-x-hidden">
         <Profile />
         {/* <TechStack /> */}
         <Projects />
