@@ -5,7 +5,7 @@ const socialLinks = [
   {
     name: 'Email',
     icon: FiMail,
-    url: 'mailto:pathurisai31.com',
+    url: 'mailto:pathurisai31@gmail.com',
   },
   {
     name: 'LinkedIn',
@@ -32,19 +32,19 @@ const socialLinks = [
 export default function Connect() {
   return (
     <motion.div
-      
+
       className=""
     >
       {/* <h2 className="font-display text-xl font-semibold mb-6 text-left">Connect with me</h2> */}
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-5 items-center">
         {socialLinks.map((social) => (
           <motion.a
             key={social.name}
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
-            
+            className="text-portfolio-muted hover:text-portfolio-text transition-colors duration-300"
+
           >
             <social.icon className="w-4 h-4" />
             <span className="sr-only">{social.name}</span>

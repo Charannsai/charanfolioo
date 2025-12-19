@@ -1,170 +1,158 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { FiExternalLink } from 'react-icons/fi'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FiArrowUpRight } from 'react-icons/fi'
 
 const projects = [
   {
     name: "Ezent",
-    description: "Ezent is a comprehensive event management platform designed to simplify every step of organizing events. It allows organizers to create, manage, and track events efficiently, while providing real-time insights and seamless attendee engagement. Checkout the platform to know more features and services provided by ezent.",
+    intent: "Event management platform",
+    description: "A comprehensive event management platform designed to simplify every step of organizing events. Allows organizers to create, manage, and track events efficiently while providing real-time insights.",
+    bullets: [
+      "Reduced manual effort for organizers",
+      "Designed end-to-end workflows",
+      "Built for reliability & scale"
+    ],
+    stack: "React · Node.js · MongoDB · Tailwind",
     liveUrl: "https://www.ezent.me"
   },
   {
     name: "Clowd",
-    description: "Clowd is a modern resume builder that lets users create professional resumes with drag-and-drop functionality and customizable templates. Users can easily download their resumes or host them on a personal subdomain. The platform simplifies resume creation while providing a sleek, user-friendly experience.",
+    intent: "Modern resume builder",
+    description: "A drag-and-drop resume builder that lets users create professional resumes with customizable templates. Features subdomains for hosting resumes online.",
+    bullets: [
+      "Drag-and-drop functionality",
+      "Customizable templates",
+      "Personal subdomain hosting"
+    ],
+    stack: "React · Firebase · Tailwind",
     liveUrl: "https://www.clowd.me"
   },
   {
     name: "BlogDrop",
-    description: "BlogDrop is a social blogging platform that lets users share, discover, and engage with content effortlessly. It features personalized feeds, interactive social elements like likes and comments, and dedicated user subdomains for showcasing blogs. The platform connects writers and readers in a dynamic, community-driven environment.",
+    intent: "Social blogging platform",
+    description: "A social blogging platform featuring personalized feeds, interactive social elements, and dedicated user subdomains for showcasing content.",
+    bullets: [
+      "Personalized content feeds",
+      "Interactive social features",
+      "Community-driven environment"
+    ],
+    stack: "Next.js · PostgreSQL · Prisma",
     liveUrl: "https://blogdrop.charanfolio.me"
-  }, {
-    name: "SysBot - AI Career Studio",
-    description: "SysBot – AI Career Studio is an AI-powered platform that guides users in career planning and skill development. It offers personalized career advice, learning resources, and mock interview features to practice and improve performance. Users can explore opportunities, enhance skills, and prepare confidently for interviews",
+  },
+  {
+    name: "SysBot",
+    intent: "AI Career Studio",
+    description: "AI-powered platform guiding users in career planning and skill development. Offers personalized advice, learning resources, and mock interviews.",
+    bullets: [
+      "AI-driven career advice",
+      "Mock interview practice",
+      "Skill gap analysis"
+    ],
+    stack: "React · OpenAI API · Express",
     liveUrl: "https://sysbot.netlify.app"
   },
   {
-    name: "CollabFlow (Under Development)",
-    description: "CollabFlow is a collaborative workflow platform designed to streamline team communication and project management. It enables teams to organize tasks, share updates, and track progress in real-time. The platform enhances productivity by simplifying collaboration and keeping everyone aligned.",
+    name: "CollabFlow",
+    intent: "Collaborative workflow platform",
+    description: "Streamlined team communication and project management tool. Enables teams to organize tasks, share updates, and track progress in real-time.",
+    bullets: [
+      "Real-time progress tracking",
+      "Team collaboration workflows",
+      "Task organization"
+    ],
+    stack: "React · Socket.io · Redux",
     liveUrl: "https://collabflow.charanfolio.me/"
   }
 ]
 
 export default function Projects() {
-  const [showAll, setShowAll] = useState(false)
-  const [previewProject, setPreviewProject] = useState(null)
-  const [hideTimeout, setHideTimeout] = useState(null)
-  const [isAnimating, setIsAnimating] = useState(false)
-  const displayedProjects = showAll ? projects : projects.slice(0, 2)
-
-  const handleProjectMouseEnter = (project) => {
-    if (hideTimeout) clearTimeout(hideTimeout)
-    setPreviewProject(project)
-  }
-
-  const handleProjectMouseLeave = () => {
-    const timeout = setTimeout(() => setPreviewProject(null), 300)
-    setHideTimeout(timeout)
-  }
-
-  const handleOpenProject = (url) => {
-    setIsAnimating(true)
-    setTimeout(() => {
-      window.open(url, '_blank')
-      setIsAnimating(false)
-      setPreviewProject(null)
-    }, 600)
-  }
+  const [expanded, setExpanded] = useState(0)
 
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.6 }}
-      className="mb-6"
-    >
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="font-display text-lg font-semibold text-left">Project That I've Built</h2>
-        {projects.length > 2 && (
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="text-xs mt-3 text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 transition-colors hover:underline hover:underline-offset-4"
-          >
-            {showAll ? 'Show Less' : 'Show More'}
-          </button>
-        )}
-      </div>
-      <div className="space-y-3 ">
-        {displayedProjects.map((project, index) => (
-          <motion.div
+    <section className="w-full">
+      <div className="flex flex-col">
+        {projects.map((project, index) => (
+          <div
             key={project.name}
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.1 * index }}
-            className="flex items-start justify-between group "
+            className="border-b border-portfolio-muted/20 last:border-none"
           >
-            <div className="flex-1 relative">
-              <span 
-                className="relative inline-block"
-                onMouseEnter={() => handleProjectMouseEnter(project)}
-                onMouseLeave={handleProjectMouseLeave}
-              >
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-2"
+            <button
+              onClick={() => setExpanded(expanded === index ? null : index)}
+              className="w-full text-left py-2 group"
+            >
+              <div className="flex items-baseline justify-between">
+                <div className="flex items-baseline gap-4">
+                  <h3 className="text-base md:text-lg font-semibold text-portfolio-text dark:group-hover:text-white transition-colors duration-300">
+                    {project.name}
+                  </h3>
+                  <span className="hidden md:block text-xs md:text-sm text-portfolio-muted font-normal group-hover:text-portfolio-text/80 transition-colors">
+                    {project.intent}
+                  </span>
+                </div>
+                <motion.span
+                  animate={{
+                    rotate: expanded === index ? 90 : 0,
+                  }}
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                  className="text-portfolio-muted group-hover:text-portfolio-text transition-colors"
                 >
-                  {project.name}
-                  <FiExternalLink size={12} />
-                </a>
-                
-                {previewProject?.name === project.name && (
-                  <motion.div
-                    initial={{ opacity: 0, x: 10, scale: 0.9 }}
-                    animate={{ 
-                      opacity: previewProject ? 1 : 0, 
-                      x: previewProject ? 0 : 10,
-                      scale: previewProject ? 1 : 0.9
-                    }}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute z-50 top-0 left-full ml-4 w-80 h-56 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl overflow-hidden pointer-events-auto md:w-96 md:h-64"
-                    style={{
-                      transformStyle: 'preserve-3d',
-                      transform: isAnimating ? 'perspective(1000px) rotateY(-90deg) scale(1.2)' : 'none',
-                      transition: isAnimating ? 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none'
-                    }}
-                    onMouseEnter={() => handleProjectMouseEnter(project)}
-                    onMouseLeave={handleProjectMouseLeave}
-                  >
-                    <div className="flex items-center justify-between p-3 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
-                      <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Preview</span>
-                      <button
-                        onClick={() => handleOpenProject(project.liveUrl)}
-                        className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 p-1"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                        </svg>
-                      </button>
+                  <FiArrowUpRight className={expanded === index ? "" : "transform rotate-45"} />
+                </motion.span>
+              </div>
+              <div className="md:hidden mt-1">
+                <span className="text-xs text-portfolio-muted font-normal">
+                  {project.intent}
+                </span>
+              </div>
+            </button>
+
+            <AnimatePresence>
+              {expanded === index && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="pb-4 pt-1 md:pl-0">
+                    <p className="text-portfolio-text/80 text-xs md:text-sm leading-relaxed max-w-2xl mb-3">
+                      {project.description}
+                    </p>
+
+                    <ul className="space-y-1 mb-3 text-xs md:text-sm text-portfolio-muted">
+                      {project.bullets.map((bullet, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="mt-1.5 w-1 h-1 rounded-full bg-portfolio-accent/60" />
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex flex-wrap items-center gap-4 text-xs md:text-sm">
+                      <span className="font-mono text-xs text-portfolio-muted/60 uppercase tracking-wider">
+                        {project.stack}
+                      </span>
+
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 text-portfolio-text hover:text-portfolio-accent transition-colors border-b border-transparent hover:border-portfolio-accent pb-0.5"
+                        >
+                          Visit Site <FiArrowUpRight />
+                        </a>
+                      )}
                     </div>
-                    <div className="w-full h-full overflow-hidden relative">
-                      <div className="absolute inset-0 p-4 bg-white dark:bg-gray-900">
-                        <div className="animate-pulse space-y-4">
-                          <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-3/4"></div>
-                          <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-1/2"></div>
-                          <div className="grid grid-cols-2 gap-3 mt-4">
-                            <div className="h-20 bg-gray-300 dark:bg-gray-600 rounded"></div>
-                            <div className="h-20 bg-gray-300 dark:bg-gray-600 rounded"></div>
-                          </div>
-                          <div className="space-y-2">
-                            <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded"></div>
-                            <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-5/6"></div>
-                            <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-4/6"></div>
-                          </div>
-                          <div className="h-16 bg-gray-300 dark:bg-gray-600 rounded mt-4"></div>
-                        </div>
-                      </div>
-                      <iframe
-                        src={project.liveUrl}
-                        className="border-0 relative z-10"
-                        style={{ 
-                          width: '1200px', 
-                          height: '800px', 
-                          transform: 'scale(0.32)', 
-                          transformOrigin: 'top left' 
-                        }}
-                        title={`${project.name} Preview`}
-                        onLoad={(e) => e.target.previousElementSibling.style.display = 'none'}
-                      />
-                    </div>
-                  </motion.div>
-                )}
-              </span>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 text-justify">{project.description}</p>
-            </div>
-          </motion.div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </section>
   )
 }

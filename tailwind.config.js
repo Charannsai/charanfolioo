@@ -11,9 +11,12 @@ export default {
         display: ['Inter', 'sans-serif'],
       },
       colors: {
-        gray: {
-          900: '#121212',
-        },
+        portfolio: {
+          bg: 'rgb(var(--portfolio-bg) / <alpha-value>)',
+          text: 'rgb(var(--portfolio-text) / <alpha-value>)',
+          muted: 'rgb(var(--portfolio-muted) / <alpha-value>)',
+          accent: 'rgb(var(--portfolio-accent) / <alpha-value>)',
+        }
       },
     },
   },

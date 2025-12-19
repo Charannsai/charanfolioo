@@ -1,36 +1,48 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
 
 const experiences = [
   {
     company: "SR3 Excellence",
     role: "Full Stack Developer",
-    startDate: "Nov 2024",
-    endDate: "Present",
-    description: "As a Full Stack Web Developer at SR3, I am responsible for building and launching the official SR3 website. I handled both the front-end and back-end development, ensuring a responsive, user-friendly interface while integrating the required functionalities to meet the organization’s goals. My work focused on creating a clean, fast, and modern web experience that effectively communicates SR3’s mission and services. Still working on it, it is under beta testing phase."
+    period: "Nov 2024 – Present",
+    bullets: [
+      "Built and launched the official SR3 website",
+      "Owned frontend and backend (React, Node)",
+      "Focused on performance and clean UX"
+    ]
   },
   {
     company: "Edunet Foundation",
     role: "Full Stack Intern",
-    startDate: "Feb 2025",
-    endDate: "April 2025",
-    description: "In my role as a Full Stack Developer at Edunet Foundation(AICTE), I worked on building a real-time collaboration tool for project management. Leveraging my skills in development, I aim to create a seamless and efficient platform to enhance team productivity and communication."
+    period: "Feb 2025 – April 2025",
+    bullets: [
+      "Built real-time collaboration tools",
+      "Enhanced team productivity workflows",
+      "Implemented efficient project management features"
+    ]
   },
   {
     company: "ICN, Pallavi Engineering College",
-    role: "Full Stack Developement Lead",
-    startDate: "Jan 2024",
-    endDate: "Present",
-    description: "In my position as Full Stack Team Lead at Pallavi Engineering College's Infinity Nexus club, I led teams of like-minded individuals to foster creativity and teamwork, resulting in successful project outcomes with actively organizing the events and workshops to build a better full stack community on campus."
+    role: "Full Stack Development Lead",
+    period: "Jan 2024 – Present",
+    bullets: [
+      "Led technical teams for community projects",
+      "Organized workshops and fostered full-stack culture",
+      "Mentored peers in web development technologies"
+    ]
   },
   {
-    company: "FreeLancer",
+    company: "Freelance",
     role: "SaaS Developer",
-    startDate: "Nov 2023",
-    endDate: "Present",
-    description: "Built and maintained web applications using modern JavaScript frameworks. Collaborated with various clients to understand their requirements and deliver tailored solutions. Developed RESTful APIs and integrated third-party services to enhance application functionality. Ensured code quality through testing and code reviews, while also optimizing applications for performance and scalability."
-  },
-  
+    period: "Nov 2023 – Present",
+    bullets: [
+      "Built custom web apps for clients",
+      "Delivered API integrations and performance optimization",
+      "Collaborated on requirements to ship tailored solutions"
+    ]
+  }
 ]
 
 export default function Experience() {
@@ -38,55 +50,59 @@ export default function Experience() {
   const displayedExperiences = showAll ? experiences : experiences.slice(0, 1)
 
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.7 }}
-      className="mb-6"
-    >
-      <div className="flex justify-between items-center mb-2">
-        <h2 className="font-display text-lg font-semibold text-left">Experience</h2>
-        {experiences.length > 1 && (
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="text-xs text-gray-500 hover:text-gray-600 mt-2 dark:text-gray-400 dark:hover:text-gray-300 transition-colors hover:underline hover:underline-offset-4"
-          >
-            {showAll ? 'Show Less' : 'Show More'}
-          </button>
-        )}
-      </div>
-      <div className="relative">
-        <div className="absolute left-2 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-700" />
-        
-        <div className="space-y-8">
-          {displayedExperiences.map((experience, index) => (
+    <div className={`relative ml-2 md:ml-0 ${showAll ? "pb-0" : "pb-12"}`}>
+      <div className="border-l border-portfolio-muted/20 space-y-5">
+        <AnimatePresence initial={false}>
+          {displayedExperiences.map((exp, index) => (
             <motion.div
-              key={experience.company}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="relative pl-8"
+              key={exp.company}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative pl-6 md:pl-8 overflow-hidden"
             >
-              <div className="absolute left-2 top-2 w-1 h-3 bg-gray-500 rounded-full -translate-x-1/2">
-               </div>
-              
-              <div className="flex flex-row items-center justify-between mb-2">
-                <div>
-                  <h3 className="text-md font-semibold">{experience.company}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{experience.role}</p>
-                </div>
-                <p className="text-xs text-gray-500 mb-5 dark:text-gray-400 ml-4">
-                  {experience.startDate} - {experience.endDate}
-                </p>
+              {/* Timeline Dot */}
+              <div className="absolute -left-[1px] top-2 w-[3px] h-6 bg-portfolio-accent/80 rounded-r-sm" />
+
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                <h3 className="text-sm md:text-base font-medium text-portfolio-text">
+                  {exp.company}
+                </h3>
+                <span className="text-xs font-mono text-portfolio-muted uppercase tracking-wider mt-1 sm:mt-0">
+                  {exp.period}
+                </span>
               </div>
-              
-              <p className="text-gray-600 dark:text-gray-400 text-xs text-justify">
-                {experience.description}
-              </p>
+
+              <div className="text-portfolio-muted font-medium mb-1 text-xs md:text-sm">
+                {exp.role}
+              </div>
+
+              <ul className="space-y-0.5">
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i} className="text-portfolio-text/70 text-xs md:text-sm leading-normal max-w-xl flex items-start gap-2">
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-portfolio-accent/60 shrink-0" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
-        </div>
+        </AnimatePresence>
       </div>
-    </motion.div>
+
+      <div className={`flex justify-center transition-all duration-300 ${!showAll ? "absolute -bottom-2 -left-[1px] w-[calc(100%+1px)] pt-20 pb-2 bg-gradient-to-t from-portfolio-bg via-portfolio-bg/90 to-transparent" : "pt-4 pb-2 mt-5"}`}>
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="flex items-center gap-2 text-xs text-portfolio-text/80 hover:text-portfolio-accent transition-colors bg-portfolio-muted/10 px-4 py-1.5 rounded-full hover:bg-portfolio-muted/20 backdrop-blur-sm"
+        >
+          {showAll ? (
+            <>Show Less <FiChevronUp /></>
+          ) : (
+            <>Show More <FiChevronDown /></>
+          )}
+        </button>
+      </div>
+    </div>
   )
 }
