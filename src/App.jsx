@@ -156,6 +156,7 @@ function App() {
 
             <div className="flex flex-col gap-2 items-start md:items-end text-sm text-portfolio-muted">
               <ThemeToggle theme={theme} setTheme={setTheme} />
+              <p className="text-xs opacity-60">Last updated on: April 2025</p>
               <p>© {new Date().getFullYear()} Charan Sai Pathuri</p>
             </div>
           </div>
