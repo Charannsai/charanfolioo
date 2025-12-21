@@ -127,9 +127,14 @@ function App() {
               viewport={{ once: true }}
               className="max-w-2xl"
             >
-              <p className="text-sm md:text-base text-portfolio-text/80 leading-relaxed font-light">
-                I prefer simple architectures that ship fast, scale naturally, and avoid unnecessary complexity.
-              </p>
+              <div className="flex flex-col gap-4">
+                <p className="text-sm md:text-base text-portfolio-text/80 leading-relaxed font-light">
+                  I’m an engineering student and full-stack developer who enjoys turning ideas into usable, real-world products. I’m curious about how systems work end to end and like being involved from problem understanding to final delivery.
+                </p>
+                <p className="text-sm md:text-base text-portfolio-text/80 leading-relaxed font-light">
+                  I prefer simple architectures that ship fast, scale naturally, and avoid unnecessary complexity. I enjoy working close to the product, understanding the problem, designing the system, and shipping iteratively. I care about clarity in code, reliability in systems, and communication in teams.
+                </p>
+              </div>
             </motion.div>
           </Section>
 
@@ -147,9 +152,7 @@ function App() {
           <section className="py-10 border-t border-portfolio-muted/10 mt-4">
             <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-end">
               <div className="flex flex-col gap-2">
-                <h3 className="text-base md:text-lg text-portfolio-text font-medium">
-                  Open to full-time roles and <br /> meaningful client work.
-                </h3>
+
                 <p className="text-portfolio-muted text-xs md:text-sm">
                   Available for select projects
                 </p>
@@ -158,10 +161,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2 items-start md:items-end text-sm text-portfolio-muted">
+              <div className="flex flex-row items-center gap-4 md:flex-col md:items-end md:gap-2 text-sm text-portfolio-muted">
                 <ThemeToggle theme={theme} setTheme={setTheme} />
                 <p className="text-xs opacity-60">Last updated on: April 2025</p>
-                <p>© {new Date().getFullYear()} Charan Sai Pathuri</p>
               </div>
             </div>
           </section>
