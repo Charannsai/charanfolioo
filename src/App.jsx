@@ -67,12 +67,12 @@ function App() {
         <main className="flex-grow flex flex-col">
           {/* TABS NAVIGATION */}
           {/* TABS NAVIGATION */}
-          <div className="flex justify-center items-center border dark:border-portfolio-muted/20 gap-1 p-1 mb-8 overflow-x-auto no-scrollbar w-full md:w-auto bg-portfolio-muted/5 rounded-xl md:inline-flex">
+          <div className="flex justify-center items-center border dark:border-portfolio-muted/20 gap-0.5 p-1 mb-8 w-full md:w-auto bg-portfolio-muted/5 rounded-xl md:inline-flex flex-nowrap">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative  flex items-center justify-center px-4 py-1.5 text-xs md:text-sm font-medium transition-colors whitespace-nowrap outline-none rounded-xl z-10 ${activeTab === tab.id
+                className={`relative flex-1 min-w-0 flex items-center justify-center px-1.5 py-1.5 text-[10px] sm:text-xs md:text-sm font-medium transition-colors whitespace-nowrap outline-none rounded-xl z-10 ${activeTab === tab.id
                   ? 'text-portfolio-text'
                   : 'text-portfolio-muted hover:text-portfolio-text/80'
                   }`}
@@ -84,7 +84,7 @@ function App() {
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
-                <span>{tab.label}</span>
+                <span className="truncate">{tab.label}</span>
               </button>
             ))}
           </div>
