@@ -36,7 +36,7 @@ export default function Connect() {
       className=""
     >
       {/* <h2 className="font-display text-xl font-semibold mb-6 text-left">Connect with me</h2> */}
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-4 items-center">
         {socialLinks.map((social) => (
           <motion.a
             key={social.name}

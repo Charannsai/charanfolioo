@@ -30,7 +30,7 @@ export default function ThemeToggle({ theme, setTheme }) {
   return (
     <button
       onClick={cycleTheme}
-      className="flex items-center gap-2 px-3 py-2 text-xs text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors cursor-pointer"
+      className="flex items-center gap-2 py-2 text-xs text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors cursor-pointer"
     >
       {getIcon()}
       <span>{getLabel()}</span>

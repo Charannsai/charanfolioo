@@ -43,3 +43,9 @@
 .read-the-docs {
   color: #888;
 }
+
+::selection {
+  background-color: #18171728;
+  color: #000000;
+  
+}
