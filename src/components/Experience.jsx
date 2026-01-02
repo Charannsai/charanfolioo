@@ -1,36 +1,24 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    company: "SR3 Excellence",
-    role: "Full Stack Developer",
-    period: "Nov 2024 – Present",
+    company: "Evangelion Solutions",
+    role: "Web Developer",
+    period: "Aug 2025 – Oct 2025",
     bullets: [
-      "Built and launched the official SR3 website",
-      "Owned frontend and backend (React, Node)",
-      "Focused on performance and clean UX"
+      "Developed an AI-powered SaaS product and successfully pushed it to beta release.",
+      "Maintaining and enhancing the platform post-launch to ensure performance, scalability, and seamless user experience.",
+      "Worked closely with cross-functional teams to implement iterative improvements based on stakeholder and beta user feedback."
     ]
   },
   {
-    company: "Edunet Foundation",
-    role: "Full Stack Intern",
-    period: "Feb 2025 – April 2025",
+    company: "Infinity Code Nexus",
+    role: "Software Developer",
+    period: "Feb 2024 – Present",
     bullets: [
-      "Built real-time collaboration tools",
-      "Enhanced team productivity workflows",
-      "Implemented efficient project management features"
-    ]
-  },
-  {
-    company: "ICN, Pallavi Engineering College",
-    role: "Full Stack Development Lead",
-    period: "Jan 2024 – Present",
-    bullets: [
-      "Led technical teams for community projects",
-      "Organized workshops and fostered full-stack culture",
-      "Mentored peers in web development technologies"
+      "Developed a end to end user and admin management system for ICN.",
+      "Maintaining and enhancing the platform to ensure performance, scalability, and seamless user experience.",
+      "Leading the development team, coordinating tasks, reviewing code, and ensuring timely delivery of features."
     ]
   },
   {
@@ -77,7 +65,7 @@ export default function Experience() {
             <ul className="space-y-0.5">
               {exp.bullets.map((bullet, i) => (
                 <li key={i} className="text-portfolio-text/70 text-sm leading-normal max-w-xl flex items-start gap-2">
-                  <span className="mt-1.5 w-1 h-1 rounded-full bg-portfolio-accent/60 shrink-0" />
+                  <span className="mt-2 w-1 h-1 rounded-full bg-portfolio-accent/60 shrink-0" />
                   {bullet}
                 </li>
               ))}

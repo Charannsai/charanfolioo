@@ -7,29 +7,29 @@ const projects = [
     name: "Ezent",
     intent: "Event management platform",
     description: "A comprehensive event management platform designed to simplify every step of organizing events. Allows organizers to create, manage, and track events efficiently while providing real-time insights.",
-    stack: "React · Node.js · MongoDB · Tailwind",
+    stack: "React · Node.js/Express · PostgreSQL ",
     liveUrl: "https://www.ezent.me"
   },
   {
     name: "Clowd",
     intent: "Modern resume builder",
     description: "A drag-and-drop resume builder that lets users create professional resumes with customizable templates. Features subdomains for hosting resumes online.",
-    stack: "React · Firebase · Tailwind",
+    stack: "Next.js · Supabase · PostgreSQL",
     liveUrl: "https://www.clowd.me"
   },
   {
     name: "BlogDrop",
     intent: "Social blogging platform",
     description: "A social blogging platform featuring personalized feeds, interactive social elements, and dedicated user subdomains for showcasing content.",
-    stack: "Next.js · PostgreSQL · Prisma",
+    stack: "Next.js · PostgreSQL · Supabase",
     liveUrl: "https://blogdrop.charanfolio.me"
   },
   {
-    name: "SysBot",
-    intent: "AI Career Studio",
-    description: "AI-powered platform guiding users in career planning. Offers personalized advice and mock interviews.",
-    stack: "React · OpenAI API · Express",
-    liveUrl: "https://sysbot.netlify.app"
+    name: "Churn Prediction",
+    intent: "Customer Churn Prediction",
+    description: "Customer Churn Prediction is a end to end web application for organizations that uses machine learning to predict customer churn based on various factors such as customer behavior, demographics, and purchase history.",
+    stack: "Flask, Python, Machine Learning",
+    liveUrl: "https://github.com/Charannsai/chubb_ai"
   },
   {
     name: "CollabFlow",
