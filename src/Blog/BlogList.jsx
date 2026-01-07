@@ -88,7 +88,7 @@ export default function BlogList() {
                         {posts.map((post) => (
                             <motion.div key={post.slug} variants={item}>
                                 <Link
-                                    to={`/blogs/${post.slug}`}
+                                    to={`/${post.slug}`}
                                     className="group block border dark:border-portfolio-muted/10 border-portfolio-muted/5 p-6 -mx-6 rounded-2xl transition-all hover:bg-portfolio-muted/5 relative overflow-hidden"
                                 >
                                     <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">

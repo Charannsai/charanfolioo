@@ -80,7 +80,7 @@ function App() {
                 {activeTab === tab.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute border dark:border-portfolio-muted/20 inset-0 bg-portfolio-card shadow-sm rounded-xl -z-10"
+                    className="absolute border bg-white dark:bg-portfolio-muted/5 dark:border-portfolio-muted/20 inset-0 shadow-sm rounded-xl -z-10"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -102,10 +102,10 @@ function App() {
                   className="max-w-2xl"
                 >
                   <div className="flex flex-col gap-2 text-left">
-                    <p className="text-sm text-portfolio-text/80 leading-relaxed font-light">
+                    <p className="text-sm text-portfolio-text/80 leading-relaxed">
                       I’m an engineering student and full-stack developer who enjoys turning ideas into usable, real-world products. I’m curious about how systems work end to end and like being involved from problem understanding to final delivery.
                     </p>
-                    <p className="text-sm text-portfolio-text/80 leading-relaxed font-light">
+                    <p className="text-sm text-portfolio-text/80 leading-relaxed">
                       I prefer simple architectures that ship fast, scale naturally, and avoid unnecessary complexity. I enjoy working close to the product, understanding the problem, designing the system, and shipping iteratively. I care about clarity in code, reliability in systems, and communication in teams.
                     </p>
                   </div>

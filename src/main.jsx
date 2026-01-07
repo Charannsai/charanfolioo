@@ -10,9 +10,18 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/blogs" element={<BlogList />} />
-        <Route path="/blogs/:slug" element={<BlogPostPage />} />
+        {window.location.hostname.startsWith('writes.') ? (
+          <>
+            <Route path="/" element={<BlogList />} />
+            <Route path="/:slug" element={<BlogPostPage />} />
+          </>
+        ) : (
+          <>
+            <Route path="/" element={<App />} />
+            <Route path="/blogs" element={<BlogList />} />
+            <Route path="/:slug" element={<BlogPostPage />} />
+          </>
+        )}
       </Routes>
     </BrowserRouter>
   </StrictMode>,

@@ -7,6 +7,8 @@ import ThemeToggle from '../components/ThemeToggle'
 export default function BlogPostPage() {
     const { slug } = useParams()
     const navigate = useNavigate()
+    const isWrites = window.location.hostname.startsWith('writes.')
+    const backPath = isWrites ? '/' : '/blogs'
     const [post, setPost] = useState(null)
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'system')
 
@@ -52,7 +54,7 @@ export default function BlogPostPage() {
     return (
         <div className="min-h-screen bg-portfolio-bg text-portfolio-text font-sans px-6 py-12">
             <div className="max-w-2xl mx-auto">
-                <BlogPost post={post} onBack={() => navigate('/blogs')} />
+                <BlogPost post={post} onBack={() => navigate(backPath)} />
 
                 {/* Footer Section matching App.jsx */}
                 <section className="py-6 border-t border-portfolio-muted/10 mt-16 mb-6">

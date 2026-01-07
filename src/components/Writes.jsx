@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
-import { useNavigate } from 'react-router-dom'
 import fm from 'front-matter'
 
 export default function Writes() {
     const [posts, setPosts] = useState([])
-    const navigate = useNavigate()
-
     useEffect(() => {
         const loadPosts = async () => {
             const modules = import.meta.glob('../Blog/posts/*.md', { query: '?raw', import: 'default', eager: true })
@@ -33,10 +30,12 @@ export default function Writes() {
     return (
         <div className="flex flex-col gap-4 animate-in fade-in duration-500">
             {posts.map((post) => (
-                <button
+                <a
                     key={post.slug}
-                    onClick={() => navigate(`/blogs/${post.slug}`)}
-                    className="group block text-left border-b border-portfolio-muted/10 pb-6 pt-2 last:border-0"
+                    href={`https://writes.charanfolio.me/${post.slug}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block text-left border-b border-portfolio-muted/10 pb-6 pt-2 last:border-0 w-full"
                 >
                     <div className="flex justify-between items-baseline mb-2">
                         <h3 className="text-lg font-semibold text-portfolio-text group-hover:text-portfolio-muted transition-colors">
@@ -54,7 +53,7 @@ export default function Writes() {
                     <div className="flex items-center text-xs text-portfolio-muted font-medium group-hover:text-portfolio-text transition-colors gap-1">
                         Read details <FiArrowUpRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
-                </button>
+                </a>
             ))}
 
             {posts.length === 0 && (
@@ -65,12 +64,14 @@ export default function Writes() {
 
             {posts.length > 0 && (
                 <div className="mt-2 text-center md:text-left">
-                    <button
-                        onClick={() => navigate('/blogs')}
+                    <a
+                        href="https://writes.charanfolio.me"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-xs text-portfolio-text/60 hover:text-portfolio-text transition-colors border-b border-transparent hover:border-portfolio-text/30 pb-0.5"
                     >
                         View all writings <FiArrowUpRight />
-                    </button>
+                    </a>
                 </div>
             )}
         </div>

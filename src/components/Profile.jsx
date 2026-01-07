@@ -10,7 +10,7 @@ export default function Profile() {
         transition={{ duration: 0.5 }}
         src="/profile2.png"
         alt="Profile"
-        className="w-20 h-20 rounded-full bg-portfolio-muted/10 object-cover flex-shrink-0 grayscale opacity-90 transition-opacity hover:opacity-100"
+        className="w-20 h-20 border border-portfolio-muted/20 rounded-full bg-portfolio-muted/10 object-cover flex-shrink-0 grayscale opacity-90 transition-opacity hover:opacity-100"
       />
 
       <motion.div
@@ -28,13 +28,13 @@ export default function Profile() {
           </h2>
         </div>
 
-        <p className="max-w-lg text-sm text-portfolio-text/90 leading-relaxed font-light">
+        <p className="max-w-lg text-sm text-portfolio-text/90 leading-relaxed">
           I build reliable, minimal systems that turn complex ideas into usable, real-world products.
         </p>
 
         <div className="flex items-center gap-4 text-sm text-portfolio-muted/60">
           <a
-            href="https://blogs.charanfolio.me"
+            href="https://writes.charanfolio.me"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-portfolio-text transition-colors"

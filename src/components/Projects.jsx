@@ -60,17 +60,17 @@ export default function Projects() {
                   <h3 className="text-base font-medium text-portfolio-text transition-colors duration-300">
                     {project.name}
                   </h3>
-                  <span className="text-sm text-portfolio-muted font-light group-hover:text-portfolio-text/70 transition-colors">
+                  <span className="text-sm text-portfolio-muted group-hover:text-portfolio-text/70 transition-colors">
                     {project.intent}
                   </span>
                 </div>
                 <motion.span
                   animate={{
-                    rotate: expanded === index ? 90 : 0,
+                    rotate: expanded === index ? "rotate-45" : 0,
                   }}
                   className="text-portfolio-muted group-hover:text-portfolio-text transition-colors text-lg opacity-50"
                 >
-                  <FiArrowUpRight className={expanded === index ? "" : "transform rotate-45"} />
+                  <FiArrowUpRight className={expanded === index ? "" : "hidden"} />
                 </motion.span>
               </div>
             </button>
@@ -85,7 +85,7 @@ export default function Projects() {
                   className="overflow-hidden"
                 >
                   <div className="pb-6 pt-2">
-                    <p className="text-portfolio-text/80 text-sm leading-relaxed max-w-xl mb-4 font-light font-sans">
+                    <p className="text-portfolio-text/80 text-sm leading-relaxed max-w-xl mb-4 font-sans">
                       {project.description}
                     </p>
 
